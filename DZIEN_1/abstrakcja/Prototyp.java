@@ -1,4 +1,4 @@
-public abstract class Prototyp {
+public abstract class Prototyp extends MojaA {
     
     protected double a;
     protected double b;
