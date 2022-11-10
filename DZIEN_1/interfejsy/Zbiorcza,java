@@ -15,7 +15,7 @@ public class Zbiorcza implements InterA, InterB{
     }
 
     @Override
-    public int liczba(int n, int k) {
+    public Integer liczba(int n, int k) {
         return n*k;
     }
 }
