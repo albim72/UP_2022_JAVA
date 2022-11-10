@@ -6,7 +6,7 @@ public class DrugaKlasa extends PierwszaKlasa {
         this.c = c;
     }
 
-    public void print_ab(){
+    public void print_abc(){
 
         System.out.printf("Wartości: a = %d, b = %d, c = %d",a,b,c);
     }
