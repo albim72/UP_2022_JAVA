@@ -1,0 +1,21 @@
+public class Zbiorcza implements InterA, InterB{
+    @Override
+    public double wynikA(double x, double y) {
+        return InterA.super.wynikA(x, y)*2;
+    }
+
+    @Override
+    public int wynik2A() {
+        return 500;
+    }
+
+    @Override
+    public String messg(String info) {
+        return "ważna wiadmość:" + info;
+    }
+
+    @Override
+    public int liczba(int n, int k) {
+        return n*k;
+    }
+}
