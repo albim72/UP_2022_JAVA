@@ -8,5 +8,8 @@ public class Main {
 
         Trapez trp = new Trapez(6.8,4.9,4.4);
         System.out.printf("Pole trapezu: %.2f\n",trp.PoleFigury());
+
+        Kolo kl = new Kolo(5.5);
+        System.out.printf("Pole koła: %.2f\n",kl.PoleFigury());
     }
 }
