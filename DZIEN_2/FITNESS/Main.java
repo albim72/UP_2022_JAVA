@@ -29,6 +29,25 @@ public class Main {
         double wynik = ob.policzBMI();
         System.out.println("Twoje BMI wynosi: "+wynik);
 
+        Kobieta kb = new Kobieta(imie,waga,wzrost,wiek);
+        Facet fc = new Facet(imie,waga,wzrost,wiek);
+
+        System.out.println("podaj swoją płeć: 1-kobieta, 2-mężczyzna");
+        int plec = sc.nextInt();
+        if(plec==1){
+            System.out.println("Witaj "+imie);
+            ppmwyn = kb.ppmVar();
+            System.out.println("PPM dla Ciebie wynosi: " + ppmwyn);
+        }
+        else if (plec==2){
+            System.out.println("Witaj "+imie);
+            ppmwyn = fc.ppmVar();
+            System.out.println("PPM dla Ciebie wynosi: " + ppmwyn);
+        }
+        else {
+            System.out.println("witaj, dokonano złego wyboru....");
+        }
+
 
     }
 }
