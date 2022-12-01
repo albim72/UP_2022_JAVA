@@ -18,4 +18,12 @@ public enum Planeta {
         this.masa = masa;
         this.promien = promien;
     }
+
+    public double masa(){
+        return masa;
+    }
+
+    public double radius(){
+        return promien;
+    }
 }
