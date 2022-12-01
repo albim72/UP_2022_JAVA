@@ -26,4 +26,15 @@ public enum Planeta {
     public double radius(){
         return promien;
     }
+    
+    //uniwersalna stała grawitacyjna
+    public static final double G=6.673E-11;
+    
+    public double przeliczGrawitacje(){
+        return G*masa/(promien*promien);
+    }
+    
+    public double przeliczMasy(double innaMasa){
+        return innaMasa*przeliczGrawitacje();
+    }
 }
