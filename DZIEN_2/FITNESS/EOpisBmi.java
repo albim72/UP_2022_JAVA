@@ -11,4 +11,8 @@ public enum EOpisBmi {
     EOpisBmi(String info) {
         this.info = info;
     }
+
+    public String info(){
+        return info;
+    }
 }
