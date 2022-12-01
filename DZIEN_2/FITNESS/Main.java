@@ -47,7 +47,57 @@ public class Main {
         else {
             System.out.println("witaj, dokonano złego wyboru....");
         }
+        try {
+            bw.write(String.valueOf(wynik));
+            bw.newLine();
+            bw.write("Twoje ppm wymosi [kcal]:");
+            bw.write(String.valueOf(ppmwyn));
+            bw.newLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try{
+            if (wynik<18.5){
+                System.out.println(EOpisBmi.NIEDOWAGA.info());
+                bw.write(EOpisBmi.NIEDOWAGA.info());
+                bw.newLine();
+            }
+            else if (wynik>=18.5 && wynik<25){
+                System.out.println(EOpisBmi.PRAWIDLOWA.info());
+                bw.write(EOpisBmi.PRAWIDLOWA.info());
+                bw.newLine();
+            }
+            else if (wynik>=25 && wynik<30){
+                System.out.println(EOpisBmi.NADWAGA.info());
+                bw.write(EOpisBmi.NADWAGA.info());
+                bw.newLine();
+            }
+            else if (wynik>=30 && wynik<35){
+                System.out.println(EOpisBmi.OTYLOSC1.info());
+                bw.write(EOpisBmi.OTYLOSC1.info());
+                bw.newLine();
+            }
+            else if (wynik>=35 && wynik<40){
+                System.out.println(EOpisBmi.OTYLOSC2.info());
+                bw.write(EOpisBmi.OTYLOSC2.info());
+                bw.newLine();
+            }
+            else if (wynik>40){
+                System.out.println(EOpisBmi.OTYLOSC3.info());
+                bw.write(EOpisBmi.OTYLOSC3.info());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
+        try{
+            bw.close();
+            fileW.fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("dokonano zapisu danych fitness do pliku tekstowego");
 
     }
 }
