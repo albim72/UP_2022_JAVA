@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class>
+    <student rollno = "398">
+        <firstname>Jacek</firstname>
+        <lastname>Kot</lastname>
+        <nickname>jkot</nickname>
+        <marks>86</marks>
+    </student>
+    <student rollno = "674">
+        <firstname>Anna</firstname>
+        <lastname>Nowak</lastname>
+        <nickname>ania</nickname>
+        <marks>88</marks>
+    </student>
+    <student rollno = "345">
+        <firstname>Nadia</firstname>
+        <lastname>Kotecka</lastname>
+        <nickname>nadka</nickname>
+        <marks>70</marks>
+    </student>
+    <student rollno = "865">
+        <firstname>Olaf</firstname>
+        <lastname>Ryś</lastname>
+        <nickname>rysiu</nickname>
+        <marks>90</marks>
+    </student>
+    <student rollno = "524">
+        <firstname>Olga</firstname>
+        <lastname>Nowik</lastname>
+        <nickname>oleśka</nickname>
+        <marks>81</marks>
+    </student>
+</class>
