@@ -1,14 +1,15 @@
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 
 public class Main {
     private static void writeXml(Document doc, OutputStream output) throws TransformerException {
@@ -20,9 +21,18 @@ public class Main {
         transformer.transform(source,result);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParserConfigurationException, TransformerException {
 
-        try (FileInputStream output = new FileInputStream("car.xml")){
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder documentBuilder = docFactory.newDocumentBuilder();
+
+        Document doc  = documentBuilder.newDocument();
+        Element rootElement =doc.createElement("autokomis");
+        doc.appendChild(rootElement);
+        doc.createElement("marka");
+        rootElement.appendChild(doc.createElement("marka"));
+
+        try (FileOutputStream output = new FileOutputStream("car.xml")){
             writeXml(doc,output);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
