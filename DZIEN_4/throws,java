@@ -1,0 +1,16 @@
+public class Main {
+
+    static void nowametoda() throws IllegalAccessException
+    {
+        System.out.println("to jest wnętrze metody nowametoda()");
+        throw new IllegalAccessException("pokaz");
+    }
+    public static void main(String[] args) {
+
+        try{
+            nowametoda();
+        }catch (IllegalAccessException e){
+            System.out.println("przechwycono w metodzie main!!!");
+        }
+    }
+}
